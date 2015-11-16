@@ -1,0 +1,47 @@
+#####################  basic configuration   #############
+HTTPPort 8090
+RTSPPort 8091
+
+HTTPBindAddress 0.0.0.0
+
+MaxHTTPConnections 2000
+MaxClients 1000
+MaxBandwidth 100000
+
+CustomLog -
+
+################### feed file configuration  #############
+<Feed feed1.ffm>
+File  feed1.ffm
+FileMaxSize 100M
+
+ACL allow 127.0.0.1
+</Feed>
+
+####################  stream file configuration  #########
+<Stream live.asf>
+Feed feed1.ffm
+Format asf
+VideoFrameRate 20
+VideoSize 640x480
+VideoBitRate 800
+VideoBufferSize 80000
+VideoGopSize 30
+VideoQMin 1
+VideoQMax 10
+Noaudio
+
+</Stream>
+
+
+
+##################################################################
+# Special stream : server status
+
+<Stream  stat.html>
+Format status
+</Stream>
+
+
+
+
