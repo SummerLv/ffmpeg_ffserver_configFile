@@ -15,7 +15,7 @@ CustomLog -
 File  feed1.ffm
 FileMaxSize 100M
 
-ACL allow 127.0.0.1
+ACL allow 127.0.0.1 192.168.5.188
 </Feed>
 
 ####################  stream file configuration  #########

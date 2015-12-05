@@ -15,20 +15,28 @@ CustomLog -
 File  feed1.ffm
 FileMaxSize 100M
 
-ACL allow 127.0.0.1 192.168.5.188
+ACL allow 127.0.0.1
 </Feed>
 
 ####################  stream file configuration  #########
-<Stream live.mjpg>
+<Stream live.mpg>
 Feed feed1.ffm
-Format mjpeg
+#
+
+#
+VideoFrameRate 25
 VideoSize 640x480
-VideoFrameRate 20
 VideoBitRate 800
-VideoQMin 1
-VideoQMax 10
-Noaudio
+VideoGopSize 30
+NoDefaults
+NoAudio
+
+PreRoll 10
+StartSendOnKey
+MaxTime 0
+
 </Stream>
+
 
 
 ##################################################################

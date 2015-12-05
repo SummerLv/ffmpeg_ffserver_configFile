@@ -1,0 +1,14 @@
+
+	
+	LOG("")
+	DGB("")
+	
+	void help(name);
+	void sig(name);
+	
+	char *input  = "input_uvc.so --resolution 640x480 --fps 5 --device /dev/video0";
+  	char *output[MAX_OUTPUT_PLUGINS];//指针数组
+  	output[0] = "output_http.so --port 8080";
+  **********************************************
+  	http://www.armbbs.net/forum.php?mod=viewthread&tid=17434
+  	  **********************************************
